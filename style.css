@@ -1,0 +1,128 @@
+
+/* crosshair cursor for canvas */
+#phaseCanvas {
+  cursor: crosshair;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#timeCanvas {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* main layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  align-items: start;
+  justify-content: center;
+  margin: 1rem;
+  margin-top: 0;
+}
+
+/* individual plot and options box styles */
+.plot {
+  flex: 1 1 350px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.12);
+}
+
+.options {
+  flex: 0 1 auto;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* font and color styles */
+body {
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-family: Helvetica, sans-serif;
+  color: #263238;
+  background-color: rgb(240, 250, 255);
+  line-height: 1.6;
+  overscroll-behavior: none; /* remove annoying white space "bounce" */
+}
+
+h1 {
+  color: #00869b;
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+h2 {
+  color: #00869b;
+  font-size: 1.5rem;
+}
+.options h2 {
+  margin-top: 0;
+}
+.plot h2 {
+  margin-left: 1rem;
+  margin-bottom: 0;
+}
+
+
+body > p {
+  font-size: 1rem;
+  margin: 0.25rem 0 1rem;
+}
+
+/* line underneath main heading */
+h1::after {
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  background-color: #00869b;
+  content: "";
+}
+
+/* form styles */
+
+#parameter-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  font-size: 1rem;
+}
+
+#parameter-form input {
+  box-sizing: border-box;
+  width: 6rem;
+  justify-self: start;
+  padding: 0.3rem;
+  border: 1px solid #b0bec5;
+  border-radius: 10px;
+  font: inherit;
+  font-size: 0.8rem;
+}
+
+#parameter-form button {
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  background: #00869b;
+  font: inherit;
+  cursor: pointer;
+
+  /* centre button */
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+#parameter-form button:hover {
+  background: #104e63;
+}

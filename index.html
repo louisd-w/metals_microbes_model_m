@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<body>
+
+<h1>Model M Phase Plane</h1>
+<p style="margin-bottom:0">Click initial point to draw trajectory and see time plot. Change parameters to investigate the system. Mouse over the time plot to trace the trajectories. Right click a plot to save as image.</p>
+<p style="margin-top:0">Click here for the <a href="https://github.com/louisd-w/louis-dw.github.io/tree/main/microbes">Github Page</a>.</p>
+
+
+
+<div class="container">
+
+  <div class="plot">
+    <h2>Phase Plane</h2>
+    <canvas id="phaseCanvas" width="750" height="750"></canvas>
+  </div>
+  <div class="plot">
+    <h2>Time Plot</h2>
+    <canvas id="timeCanvas" width="750" height="750"></canvas>
+  </div>
+
+  <div class="options">
+    <h2>Parameters</h2>
+
+    <form id="parameter-form">
+      <label for="param-a">a</label>
+      <input id="param-a" name="a" type="number" value="5" step = "any" required>
+
+      <label for="param-b">b</label>
+      <input id="param-b" name="b" type="number" value="2" step = "any" required>
+
+      <label for="param-c">c</label>
+      <input id="param-c" name="c" type="number" value="0.5" step = "any" required>
+
+      <label for="param-d">d</label>
+      <input id="param-d" name="d" type="number" value="1" step = "any" required>
+
+      <label for="param-phi">phi</label>
+      <input id="param-phi" name="phi" type="number" value="1" min="0" max="1" step = "any" required>
+
+      <label for="param-K">K</label>
+      <input id="param-K" name="K" type="number" value="10" step = "any" required>
+
+      <label for="param-af">a_f</sub></label>
+      <input id="param-af" name="a_f" type="number" value="1" step = "any" required>
+
+      <label for="param-Wc">W_c</sub></label>
+      <input id="param-Wc" name="W_c" type="number" value="1" step = "any" required>
+
+      <label for="param-Kb">K_b</sub></label>
+      <input id="param-Kb" name="K_b" type="number" value="1" step = "any" required>
+
+      <label for="xmax">axes limit</label>
+      <input id="xmax" name="xmax" type="number"  value="6"  min="0.01"  step="any" required>
+  
+      <button type="submit">Update Plot</button>
+    </form>
+
+  </div>
+
+ </div>
+
+<script src="functions.js"></script>
+<script src="phaseplot.js"></script>
+<script src="timeplot.js"></script>
+<script src="trajectories.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
